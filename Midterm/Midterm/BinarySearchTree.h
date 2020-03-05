@@ -1,5 +1,7 @@
 #pragma once
 #include "BinaryNode.h"
+#include <vector>
+using namespace std;
 
 template <typename T>
 class BinarySearchTree
@@ -55,6 +57,38 @@ public:
 		}
 	}
 
+	vector<int> bstToVector(BinaryNode<T>* root)
+	{
+		vector<int> bst_vect;
+		vector<int> result;
+		BinaryNode<T>* current = root;
+
+		if (current == nullptr)
+		{
+			return bst_vect;
+		}
+
+		//left
+		result = bstToVector(current->left);
+
+		//us
+		bst_vect.push_back(current->value);
+
+		//right
+		result = bstToVector(current->right);
+
+		// maybe add another return bst_vect? with what if statement? gets caught after left(0) finishes
+
+		/*if (current->right == nullptr)
+		{
+			return bst_vect;
+		}
+		else
+		{
+			bst_vect = bstToVector(current->right);
+		}*/
+		
+	}
 
 	BinaryNode<T>* addElementRec(BinaryNode<T>* node, const T& value)
 	{

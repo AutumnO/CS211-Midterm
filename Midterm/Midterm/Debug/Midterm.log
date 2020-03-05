@@ -1,2 +1,16 @@
 ﻿  main.cpp
+C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\BinarySearchTree.h(73,2): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\BinarySearchTree.h(61): message : while compiling class template member function 'std::vector<int,std::allocator<int>> BinarySearchTree<int>::bstToVector(BinaryNode<T> *)'
+          with
+          [
+              T=int
+          ]
+C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\main.cpp(37): message : see reference to function template instantiation 'std::vector<int,std::allocator<int>> BinarySearchTree<int>::bstToVector(BinaryNode<T> *)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\main.cpp(27): message : see reference to class template instantiation 'BinarySearchTree<int>' being compiled
+C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\BinarySearchTree.h(83,2): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\BinarySearchTree.h(98): warning C4715: 'BinarySearchTree<int>::bstToVector': not all control paths return a value
   Midterm.vcxproj -> C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Debug\Midterm.exe

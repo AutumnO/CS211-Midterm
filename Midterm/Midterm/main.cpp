@@ -1,5 +1,7 @@
 #include <string>
 #include <vector>
+#include <iostream>
+#include "BinarySearchTree.h"
 
 
 
@@ -25,8 +27,11 @@ int main()
 
 	for (int i = 0; i < 10; i++)
 	{
-		bst.addElementRec(rand() % 100);
+		bst.addElementRec(i);
 	}
+
+	bst.exists_iter(bst.get_root(), 1);
+	bst.exists_iter(bst.get_root(), 6);
 	
 	return 0;
 }

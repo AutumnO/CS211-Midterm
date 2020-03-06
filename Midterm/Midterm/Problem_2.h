@@ -62,7 +62,6 @@ vector<int> bstToVector(BinaryNode<T>* root)
 template <typename T>
 vector<int> bstToVectHelper(BinaryNode<T>* root, vector<int> bst_vect)
 {
-	vector<int> result;
 	BinaryNode<T>* current = root;
 
 	if (current == nullptr)

@@ -23,10 +23,30 @@ public:
         root = previous;
     }
 
-    //          *** Problem 1B ***
+    //          *** Problem 1B ***      O(N)
     LinkedList* mergedSortedLinkedLists(LinkedList* first, LinkedList* second)
     {
-        
+        LinkedList* result;
+        if (first == nullptr)
+        {
+            return second;
+        }
+        else if (second == nullptr)
+        {
+            return first;
+        }
+
+        if (first->value > second->value)
+        {
+            result = first;
+            result->next = mergedSortedLinkedLists(first->next, second);
+        }
+        else
+        {
+            result = second;
+            result->next = mergedSortedLinkedLists(first, second->next);
+        }
+        return result;
     }
 };
 

@@ -1,8 +1,2 @@
 ﻿  main.cpp
-C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\main.cpp(58,6): warning C4101: 'result': unreferenced local variable
-C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Midterm\main.cpp(120): message : see reference to function template instantiation 'std::vector<int,std::allocator<int>> bstToVector<T>(BinaryNode<T> *)' being compiled
-          with
-          [
-              T=int
-          ]
   Midterm.vcxproj -> C:\Users\ao191\Desktop\bin\CS211-Midterm\Midterm\Debug\Midterm.exe

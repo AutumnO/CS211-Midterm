@@ -10,12 +10,56 @@ using namespace std;
 
 bool isBalanced(string to_evaluate, unordered_map<string, string> braces)
 {
+	bool open1 = false;
+	bool open2 = false;
+	bool open3 = false;
+	vector<char> lastp;
+	string text;
 	for (int i = 0; i < to_evaluate.size(); i++)
 	{
-		if (to_evaluate[i] == '(' || to_evaluate[i] <= ')')
+		if (to_evaluate[i] == '(' || to_evaluate[i] == '(' ||
+			to_evaluate[i] == '(' || to_evaluate[i] == '(' ||
+			to_evaluate[i] == '(' || to_evaluate[i] == '(')
 		{
-
+			text += to_evaluate[i];
 		}
+	}
+	
+	for (int i = 0; i < text.size(); i++)
+	{
+		switch (text[i])
+		{
+			case '(':
+				open1 = true;
+				break;
+			case '{':
+				open2 = true;
+				break;
+			case '[':
+				open3 = true;
+				break;
+			case ')':
+				if (open1 == false)
+					return false;
+				if (lastp.back != '(')
+					return false;
+				break;
+			case '}':
+				if (open2 == false)
+					return false;	
+				if (lastp.back != '{')
+					return false;
+				break;
+			case ']':
+				if (open3 == false)
+					return false;
+				if (lastp.back != '[')
+					return false;
+				break;
+			default:
+				break;
+		}
+		lastp.back = text[i];
 	}
 	return true;
 }
